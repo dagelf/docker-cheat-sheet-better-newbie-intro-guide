@@ -48,10 +48,11 @@ IMO All the namings used in docker is wrong. Let me translate it for you, then i
 
  **docker cp** -> copy files to/from the container
  
- ###volume = almost like a container, except it can only contain data, and you have to attach it to a container
-  also a neat way to share data between containers
+###volume
+Almost like a container, except it can only contain data, and you have to attach it to a container. Also a neat way to share data between containers.
   
-###bind mount = a way to share a part of your host OS filesystem with containers
+###bind mount
+A way to share a part of your host OS filesystem with containers.
 
 ###registry = an online hub that stores images
  **docker login** -> connect to a registry - by default, the Docker hub; Now you can push images
