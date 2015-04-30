@@ -7,7 +7,7 @@ IMO All the namings used in docker is wrong. Let me translate it for you, then i
 
 ###image = Template!
 
-*An image is a template for a machine, ideally running just one command. That means that a docker image contains a template filesystem as well as some metadata about what command it should run when it gets used. An image cannot be run! When you run it - it is called a container!*
+*An image is a template for a machine that ideally runs just one command. That means that a docker image contains a template filesystem containing all the files and commands needed as well as some metadata about what command or startup script it should run when it gets used. An image cannot be run! When you run it - it is called a container! (The images is in turn created by a dockerfile, which is the recipe for creating it.)*
 
  **docker images** -> list locally available images
  
