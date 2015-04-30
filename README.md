@@ -26,7 +26,7 @@ IMO All the namings used in docker is wrong. Let me translate it for you, then i
 ###container = Instances of an image
  *When you run an "image" - it is not the image that is run, but rather, it creates a container, and then starts the container!*
 
- **docker run <image>** = returns a containerid -> creates a container from an image, on it's own clean filesystem as per the template, and then "starts" that container. 
+ **docker run <image>** = returns a containerid -> creates a container from an image, on its own clean filesystem as per the template, and then "starts" that container. 
 
  **docker stop** or **docker kill** -> stops a container. Everything is still there, it's just not running anymore. 
 
