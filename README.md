@@ -1,11 +1,11 @@
 ## A better docker guide for newbies and even kernel hackers.
-###And a cheat sheet!
+### And a cheat sheet!
 
-IMO All the namings used in docker is wrong. Let me translate it for you, then it will instantly make sense! (If you think like me!)
+IMO All the namings used in docker are wrong. Let me translate it for you, then it will instantly make sense! (If you think like me!)
 
-##Docker
+## Docker
 
-###image = Template!
+### image = Template!
 
 *An image is a template for a machine that ideally runs just one command. That means that a docker image contains a template filesystem containing all the files and commands needed as well as some metadata about what command or startup script it should run when it gets used. An image cannot be run! When you run it - it is called a container! (The images is in turn created by a dockerfile, which is the recipe for creating it.)*
 
@@ -23,7 +23,7 @@ IMO All the namings used in docker is wrong. Let me translate it for you, then i
 
  **docker export** -> outputs the filesystem of an image to standard output (to your console!) as a tarball
  
-###container = Instances of an image
+### container = Instances of an image
  *When you run an "image" - it is not the image that is run, but rather, it creates a container, and then starts the container!*
 
  **docker run <image>** = returns a containerid -> creates a container from an image, on its own clean filesystem as per the template, and then "starts" that container. 
@@ -48,21 +48,21 @@ IMO All the namings used in docker is wrong. Let me translate it for you, then i
 
  **docker cp** -> copy files to/from the container
  
-###volume
+### volume
 Almost like a container, except it can only contain data, and you have to attach it to a container. Also a neat way to share data between containers.
   
-###bind mount
+### bind mount
 A way to share a part of your host OS filesystem with containers.
 
-###registry = an online hub that stores images
+### registry = an online hub that stores images
  **docker login** -> connect to a registry - by default, the Docker hub; Now you can push images
 
  **docker logout** -> log out from a registry; now you can't push images anymore
 
-###Dockerfiles
+### Dockerfiles
 A Dockerfile is a recipe for creating an image. So it's the list of commands you need to run to set up a template environment, on which you can run things.
 
-##Naming
+## Naming
 ### Images
 Images are named USERNAME/IMAGE:TAG
 
@@ -71,5 +71,5 @@ So, if your username is @Dagelf, and you have a CentOS image with a webserver in
 ## Updating images
 So docker Hub has a really cool service where they will automatically build images based on Dockerfiles - so whenever you pull an image from them, it will always be up to date. But the question is, how do you keep your image updated, once you've pulled it and started using it? Well, the simple answer is: you don't. You set up your application flow so that when you want to update, you simply pull it again, and start a new container. When the new container is running smoothly, you simply stop the old container. Of course you can just keep on updating your old containers with the usual update commands, but the philosophy - and beauty - of docker, is that you can start from scratch, every time, with just one command. If you want to. Why? Because it forces you to document your setup process in a repeatable (and hence portable) manner - which in turn makes a lot of other things easier...
 
-##TBC
+## TBC
  Feel free to update/edit/format. Thanks!
